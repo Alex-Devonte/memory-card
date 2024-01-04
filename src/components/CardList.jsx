@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Card from "./Card";
 import PropTypes from 'prop-types'
 
@@ -65,6 +65,13 @@ function CardList({cardDetails, currentScore, setCurrentScore, setBestScore}) {
             });
         }
     };
+
+    useEffect(() => {
+        //Check for the win condition when currentScore changes
+        if (currentScore === 10) {
+            alert('Congratulations! YOU WIN!!');
+        }
+    }, [currentScore]);
     
     const gridPositionArray = populateGridArray();
     const newGridPositionArray = shuffleGridArray();
