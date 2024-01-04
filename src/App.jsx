@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import './card.css'
 import CardList from './components/CardList'
 import axios from 'axios';
 
@@ -51,7 +52,7 @@ function App() {
 
   return (
     <>
-      <CardList cardDetails={cardDetails}/>
+      { cardDetails.length > 1 ? <CardList cardDetails={cardDetails}/> : null}
     </>
   )
 }
