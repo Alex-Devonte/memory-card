@@ -17,11 +17,12 @@ CardList.propTypes = {
 
 function CardList({cardDetails, currentScore, setCurrentScore, setBestScore}) {
     const [clickedCards, setClickedCards] = useState([]);
+    const dataCount = cardDetails.length;
 
     const populateGridArray = () => {
         //create an array of numbers from 1 to the length of the cardDetails array
         let gridArr = [];
-        for (let i = 1; i <= cardDetails.length; i++) {
+        for (let i = 1; i <= dataCount; i++) {
             gridArr.push(i);
         }
         return gridArr;
@@ -68,10 +69,10 @@ function CardList({cardDetails, currentScore, setCurrentScore, setBestScore}) {
 
     useEffect(() => {
         //Check for the win condition when currentScore changes
-        if (currentScore === 10) {
+        if (currentScore === dataCount) {
             alert('Congratulations! YOU WIN!!');
         }
-    }, [currentScore]);
+    }, [currentScore, dataCount]);
     
     const gridPositionArray = populateGridArray();
     const newGridPositionArray = shuffleGridArray();
