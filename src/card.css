@@ -1,97 +1,96 @@
 @font-face {
-    font-family: 'pokeHollow';
-    src: local('pokeFont'), url('./assets/Pokemon Hollow.ttf') format('truetype');
+  font-family: "pokeHollow";
+  src: local("pokeFont"), url("./assets/Pokemon Hollow.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'pokeSolid';
-    src: local('pokeFont'), url('./assets/Pokemon Solid.ttf') format('truetype');
+  font-family: "pokeSolid";
+  src: local("pokeFont"), url("./assets/Pokemon Solid.ttf") format("truetype");
 }
-  
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #d1cfcf;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: #d1cfcf;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
 }
 
 #scoreboard {
-    background-color: #f5f5f5;
-    border: 2px solid #000;
-    border-radius: 5px;
-    font-family: 'pokeSolid';
-    font-size: 20px;
-    margin: 20px;
-    padding: 10px;
-    width: 250px;
+  background-color: #f5f5f5;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-family: "pokeSolid";
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px;
+  width: 250px;
 }
 
 #card-list {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    padding: 5px;
-    width: 100%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 5px;
+  width: 100%;
 }
-  
-.card {
-    align-items: center;
-    background-color: #f5f5f5;
-    border: 3px solid #000;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    font-family: 'pokeSolid';
-    justify-content: center;
-    letter-spacing: 5px;
 
-    transition: background-color 0.2s ease;
+.card {
+  align-items: center;
+  background-color: #f5f5f5;
+  border: 3px solid #000;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  font-family: "pokeSolid";
+  justify-content: center;
+  letter-spacing: 5px;
+
+  transition: background-color 0.2s ease;
 }
 
 .card:hover {
-    background-color: #000;
-    cursor: pointer;
+  background-color: #000;
+  cursor: pointer;
 }
 
 .card .info {
-    background-color: rgba(251, 27, 27, 0.8);
-    border-radius: 5px;
-    color: #fff;
-    margin-bottom: 10px;
-    text-align: center;
-    width: 100%;
+  background-color: rgba(251, 27, 27, 0.8);
+  border-radius: 5px;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
 }
-  
+
 .poke-id {
-    font-family: 'pokeHollow';
-    font-size: 25px;
+  font-family: "pokeHollow";
+  font-size: 25px;
 }
 
 .poke-name {
-    font-size: 30px;
-    font-weight: bold;
-    text-transform: capitalize;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 .poke-img {
-    height: 200px;
-    width: 200px;
-    padding: 15px;
+  height: 200px;
+  width: 200px;
+  padding: 15px;
 }
 
 @media only screen and (min-width: 992px) {
-    #card-list {
-        grid-template-columns: repeat(5, 1fr);
-    }
+  #card-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
