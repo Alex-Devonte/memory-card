@@ -18,9 +18,11 @@ function Card({pokemon, gridPosition, onClick}) {
 
     return (
         <div className="card" style={{order: gridPosition}} onClick={handleClick}>
-            <h2>#{pokemon.id}</h2>
-            <h1>{pokemon.name}</h1>
-            <img src={pokemon.img}/>
+            <div className="info">
+                <p className="poke-id">#{pokemon.id}</p>
+                <p className="poke-name">{pokemon.name}</p>
+            </div>
+            <img className="poke-img" src={pokemon.img}/>
         </div>
     )
 }
