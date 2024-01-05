@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import './App.css'
 import './card.css'
 import CardList from './components/CardList'
 import axios from 'axios';
@@ -54,10 +53,10 @@ function App() {
   }
 
   return (
-    <>
+    <div id="container">
       <Scoreboard currentScore={currentScore} bestScore={bestScore}/>
       { cardDetails.length > 1 ? <CardList cardDetails={cardDetails} currentScore={currentScore} setCurrentScore={setCurrentScore} setBestScore={setBestScore}/> : null}
-    </>
+    </div>
   )
 }
 
